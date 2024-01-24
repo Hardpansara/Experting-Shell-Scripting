@@ -57,6 +57,56 @@ echo "Return value is $ret"
 
 This `Hello` function returns a value using `return`. We call it with "Hard Pansara!", store the return value in `ret`, and print it using `echo`.
 
+** Example **
+
+```bash
+#!/bin/bash
+
+# 1. Function to take input from the user
+getInput() {
+  read -p "Enter a string to check for palindrome: " inputString
+  echo "$inputString"
+}
+
+# 2. Function to check if a string is a palindrome
+checkPalindrome() {
+  inputString="$1"
+  reversedString=""
+
+  # Reverse the input string
+  for (( i = $((${#inputString} - 1)); i >= 0; i-- )); do
+    reversedString+=${inputString:$i:1}
+  done
+
+  # Compare the input string with its reversed version
+  if [[ "$inputString" == "$reversedString" ]]; then
+    echo "$inputString is a palindrome."
+  else
+    echo "$inputString is not a palindrome."
+  fi
+}
+
+# Main program
+inputString=$(getInput)
+checkPalindrome "$inputString"
+
+```
+Function `gerInput()` :
+- Prompts the user to enter a string using `read -p`.
+- Stores the entered string in the `inputString` variable.
+- Echoes the string back to the user for confirmation.
+
+Function `checkPalindrome()` :
+- Takes the input string as an argument (`"$1"`).
+- Initializes an empty string `reversedString` to store the reversed version.
+- Iterates through the input string in reverse order using a `for` loop.
+- Appends each character to the `reversedString`.
+- Compares the `inputString` with the `reversedString` using a conditional statement.
+- Prints whether the string is a palindrome or not.
+
+Main program :
+- Calls the `getInput()` function to get the input from the user and stores it in the `inputString` variable.
+- Passes the `inputString` to the `checkPalindrome()` function to check for palindrome.
 **Dynamic Greeting Generator: Time for Magic!** 
 
 ```bash
