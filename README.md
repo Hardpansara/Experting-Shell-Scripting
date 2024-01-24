@@ -177,5 +177,41 @@ This script cleans up the current directory by removing log files older than 7 d
 - **Separator Line:** Visually separates the header from the cleanup details.
 - **Remove Log Files:** Uses `find` to search for log files older than 7 days (`-mtime +7`) and removes them using `rm`.
 - **Cleanup Completion Message:** Confirms the successful cleanup.
-
+  
 This script streamlines routine maintenance, ensuring the removal of redundant files and maintaining optimal organization within your directories.
+
+**Network Information**
+```bash
+#!/bin/bash
+
+echo "Network Information:"
+echo "--------------------"
+
+# Display hostname
+hostname
+
+# Display IP address
+ip addr show
+
+# Display network interfaces
+ip link show
+
+# Display routing table
+ip route
+```
+- **Hostname Display**:`hostname` Runs the hostname command to retrieve and print the system's hostname, which is its unique identifier on the network.
+- **Network Interfaces Display**:`ip link show`: Runs the `ip link show` command to list all available network interfaces (e.g., Ethernet, Wi-Fi) and their current status (up/down). This can be helpful for troubleshooting network connectivity issues.
+- **Routing Table Display**:`ip route`: Runs the `ip route` command to show the system's routing table, which specifies how it directs network traffic to different destinations. This can be useful for understanding how your machine reaches various network resources and optimizing routing paths.
+
+```bash
+#!/bin/bash
+
+echo "CPU Usage Monitor:"
+echo "-------------------"
+
+while true; do
+  top -bn1 | head -n 15
+  sleep 5
+done
+```
+
