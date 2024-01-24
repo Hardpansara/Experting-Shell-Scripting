@@ -202,7 +202,7 @@ ip route
 - **Hostname Display**:`hostname` Runs the hostname command to retrieve and print the system's hostname, which is its unique identifier on the network.
 - **Network Interfaces Display**:`ip link show`: Runs the `ip link show` command to list all available network interfaces (e.g., Ethernet, Wi-Fi) and their current status (up/down). This can be helpful for troubleshooting network connectivity issues.
 - **Routing Table Display**:`ip route`: Runs the `ip route` command to show the system's routing table, which specifies how it directs network traffic to different destinations. This can be useful for understanding how your machine reaches various network resources and optimizing routing paths.
-
+**CPU Usage Monitor**
 ```bash
 #!/bin/bash
 
