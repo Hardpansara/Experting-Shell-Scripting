@@ -57,7 +57,7 @@ echo "Return value is $ret"
 
 This `Hello` function returns a value using `return`. We call it with "Hard Pansara!", store the return value in `ret`, and print it using `echo`.
 
-** Example **
+**Example**
 
 ```bash
 #!/bin/bash
