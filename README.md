@@ -215,3 +215,8 @@ while true; do
 done
 ```
 
+- `while true; do`: Initiates an infinite loop.
+- `top -bn1 | head -n 15`: Executes the top command to display system resource usage. The options -bn1 specify a single iteration in non-interactive mode. The output is then piped (|) to head -n 15, which limits the output to the first 15 lines, showing the top processes.
+- `sleep 5`: Pauses the script for 5 seconds before the next iteration of the loop.
+- `done:` Marks the end of the while loop.
+
